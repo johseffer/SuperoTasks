@@ -1,0 +1,22 @@
+<div class="example-container">
+  <form>
+    <button *ngIf="isEdit" mat-button class="btn-detail white-icon" (click)="delete()">
+      <mat-icon>delete</mat-icon>Remover
+    </button>
+    <button mat-button class="btn-detail white-icon" (click)="cancel()">
+      <mat-icon>cancel</mat-icon>Cancelar
+    </button>
+    <button mat-button class="btn-detail white-icon" (click)="save()">
+      <mat-icon>save</mat-icon>Salvar
+    </button>
+    <br />
+    <mat-form-field>
+      <input class="mat-input" matInput placeholder="Título" width="100%" [formControl]="title" required>
+      <mat-error *ngIf="title.invalid">{{getErrorMessageTitle()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input class="mat-input" matInput placeholder="Descrição" width="100%" [formControl]="description" required>
+      <mat-error *ngIf="description.invalid">{{getErrorMessageDescription()}}</mat-error>
+    </mat-form-field>
+  </form>
+</div>
