@@ -6,8 +6,8 @@ ________________________________________________________________________________
 FRONT-END
 _______________________________________________________________________________________________________________________________________________________________________________________
 
-** Tecnologias utilizadas: Angular6, Angular Material, Bootstrap4
-** Projeto disponível no diretório: ..\SuperoTasks-Presenter\supero-tasks-app
+* Tecnologias utilizadas: Angular6, Angular Material, Bootstrap4
+* Projeto disponível no diretório: ..\SuperoTasks-Presenter\supero-tasks-app
 
 - Para executar o projeto executar console de comando e navegar até a raiz do diretório: cd supero-tasks-app;
 - Executar o comando "npm install" para fazer o download dos pacotes necessários;
@@ -18,17 +18,17 @@ ________________________________________________________________________________
 BACK-END
 _______________________________________________________________________________________________________________________________________________________________________________________
 
-** Tecnologias utilizadas: ASP.NET Core WebAPI, Entity Framework 6, Arquitetura baseada em DDD
-** Projeto disponível no diretório: ..\SuperoTasks-WebAPICore
+* Tecnologias utilizadas: ASP.NET Core WebAPI, Entity Framework 6, Arquitetura baseada em DDD
+* Projeto disponível no diretório: ..\SuperoTasks-WebAPICore
 
-** DATABASE
+* DATABASE
 Banco de dados configurado para utilizar banco de dados embutido, localizado em ..\SuperoTasks-WebAPICore\SuperoTasks.WebAPICore.Data\App_Data
 
 obs: 
 - Se necessário alterar o banco de dados, executar os scripts de criação de banco disponíveis em: ..\SuperoTasks-WebAPICore\SuperoTasks.WebAPICore.Data\Scripts;
 - Em seguida alterar o arquivo ..\SuperoTasks-WebAPICore\SuperoTasks.WebAPICore.Data\Context\SuperoTasksContext.cs, configurando o banco desejado.
 
-** API
+* API
 - Para executar o projeto abrir o arquivo da solution disponível no diretório: ..\SuperoTasks-WebAPICore\SuperoTasks-WebAPICore.sln;
 - Compilar e rodar aplicação utilizando os menus ou atalho de teclas 'F5';
 - A aplicação estará disponível na url: http://localhost:62824/
