@@ -1,0 +1,3 @@
+<p class="postit" [attr.data-boardId]="board.id" draggable="true" (dragstart)="dragStart($event)" id="{{card.id}}" (click)="openDetail($event, card)">
+  {{card.title}}
+</p>

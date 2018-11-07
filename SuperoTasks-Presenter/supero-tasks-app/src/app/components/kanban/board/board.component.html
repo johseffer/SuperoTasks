@@ -1,0 +1,14 @@
+<div class="page">
+  <div class="board-list" [attr.data-boardId]="board.id" *ngFor="let board of boards">
+    <div class="board-item" [attr.data-boardId]="board.id" (dragover)="allowDrop($event)" (drop)="drop($event)">
+      <div class="board__top">
+        <p class="board__title" [attr.data-boardId]="board.id"><strong>{{board.name}}</strong>
+          <a class="board__newcard" (click)="toggleDisplayAddCard(board);">+</a>
+        </p>
+      </div>
+      <div class="cards" [attr.data-boardId]="board.id">
+        <app-card *ngFor="let card of board.cards" [card]="card" [board]="board"></app-card>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[ST_CARD]
+(
+	[Id] INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	[Title] VARCHAR(100) NOT NULL,
+	[Board_Id] INT NOT NULL,
+	[Description] VARCHAR(200) NULL,
+	[CreationDate] DATETIME NOT NULL,
+	[StartedDate] DATETIME NULL,
+	[FinishedDate] DATETIME NULL,
+	[DeletedDate] DATETIME NULL,
+	FOREIGN KEY (Board_Id) REFERENCES ST_BOARD(Id)
+)
