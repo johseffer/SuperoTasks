@@ -28,9 +28,10 @@ export class BoardComponent implements OnInit {
   }
 
   getBoards() {
-    this.boardService.getBoards().subscribe(r => {
+    this.subscription = this.boardService.getBoards().subscribe(r => {
       this.boards = r as BoardModel[];
       this.changeDetectorRef.detectChanges();
+      this.subscription.unsubscribe();
     });
   }
 
@@ -69,7 +70,7 @@ export class BoardComponent implements OnInit {
     const cardId = document.getElementById(data).id;
 
 
-    this.cardService.updateCardBoard(cardId, boardId).subscribe(
+    this.subscription = this.cardService.updateCardBoard(cardId, boardId).subscribe(
       r => {
         if (targetClassName === 'card') {
           $event.target.parentNode.insertBefore(document.getElementById(data), $event.target);
@@ -82,10 +83,12 @@ export class BoardComponent implements OnInit {
         } else {
           target.appendChild(document.getElementById(data));
         }
+
+        this.subscription.unsubscribe();
       },
       error => {
         alert('Erro ao atualizar tarefa!');
-       }
+      }
     );
 
   }
